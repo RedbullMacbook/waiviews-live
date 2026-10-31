@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+    WaiView - Lake Te Koo Utu walk page
+    COMP506 Interactive Digital Media - Roopu 01
+    Cruz, Seton, Ronald, Kaden, Wiremu
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaiView - Lake Te Koo Utu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Site name and main navigation -->
+    <header>
+        <a href="index.html" class="site-name"><span class="wai">Wai</span><span class="view">View</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="videos.html" class="active">Videos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="side left"></div>
+
+        <!-- Main page content -->
+        <main>
+            <a href="videos.html" class="back">&lt; Back to walks</a>
+
+            <h1>Lake Te Koo Utu</h1>
+
+            <!-- walk video (with captions) and map side by side -->
+            <div class="walk-top">
+                <video controls preload="metadata" playsinline poster="images/posters/lake-te-koo-utu.jpg" title="Lake Te Koo Utu walk video" aria-describedby="video-description">
+                    <source src="videos/lake-te-koo-utu.mp4" type="video/mp4">
+                    <track kind="captions" src="videos/lake-te-koo-utu.vtt" srclang="en" label="English (scene descriptions)">
+                    Your browser does not support video.
+                </video>
+                <iframe src="https://maps.google.com/maps?q=Lake%20Te%20Koo%20Utu%2C%20Cambridge&amp;z=15&amp;output=embed" title="Map of Lake Te Koo Utu"></iframe>
+            </div>
+
+            <div class="walk-info">
+                <div class="walk-text">
+                    <h2>About this walk</h2>
+                    <p>Lake Te Koo Utu (also spelt Te Ko Utu or Te Koutu) is a small lake right in the middle of Cambridge. It sits in a deep bowl surrounded by big old trees and native bush, so it feels quiet even though it's only a few minutes from the main street.</p>
+                    <p>The lake formed nearly 2,000 years ago, when material from a Taupō eruption came down the Waikato River and blocked off the stream here. The lake was an important place for local Māori to catch eels and kōura (freshwater crayfish). The path around the lake is wide and flat with no steps.</p>
+                    <p id="video-description"><b>Video description:</b> A 16 minute walk around Lake Te Koo Utu. It follows the gravel path under tall trees and past lawns, weeping willows and water lilies, crosses a wooden bridge, passes a mother duck with her ducklings on the grass, and goes between tree ferns and big trees around the lake.</p>
+
+                    <h2>Things to look out for</h2>
+                    <ul>
+                        <li>The water lilies covering parts of the lake</li>
+                        <li>Ducks and ducklings on the grass by the water</li>
+                        <li>The huge old trees around the edge of the lake</li>
+                        <li>The wooden bridge over one arm of the lake</li>
+                        <li>Tree ferns growing right beside the water</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><b>Location:</b> Cambridge Domain, Cambridge (entry off Albert Street)</p>
+                    <p><b>Time:</b> About 30 minutes around the lake (1.5 km)</p>
+                    <p><b>Tips:</b> The path is flat with no steps. There is a playground and toilets near the car park.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>More Walks</h2>
+            <div class="walk-list">
+                <a href="walk-waikato-river.html" class="walk-card">
+                    <img src="images/thumbs/waikato-river.jpg" alt="Waikato River Walk">
+                    <h3>Waikato River Walk</h3>
+                    <p>A walk along the Waikato River through the middle of Hamilton.</p>
+                </a>
+                <a href="walk-borman-road-lake.html" class="walk-card">
+                    <img src="images/thumbs/borman-road-lake.jpg" alt="Borman Road Lake">
+                    <h3>Borman Road Lake</h3>
+                    <p>A walk through a native wetland in the middle of Rototuna, Hamilton.</p>
+                </a>
+                <a href="walk-hamilton-lake.html" class="walk-card">
+                    <img src="images/thumbs/hamilton-lake.jpg" alt="Hamilton Lake">
+                    <h3>Hamilton Lake</h3>
+                    <p>The loop track around Hamilton's biggest lake, Lake Rotoroa.</p>
+                </a>
+            </div>
+        </main>
+
+        <div class="side right"></div>
+    </div>
+
+    <!-- Footer with the colour theme picker -->
+    <footer>
+
+        <!-- colour theme picker (CSS only - see the colour themes section in style.css) -->
+        <fieldset class="theme-picker">
+            <legend>Colour theme:</legend>
+            <input type="radio" name="theme" id="theme-default" checked>
+            <label for="theme-default">Default</label>
+            <input type="radio" name="theme" id="theme-dark">
+            <label for="theme-dark">Dark</label>
+            <input type="radio" name="theme" id="theme-contrast">
+            <label for="theme-contrast">High contrast</label>
+        </fieldset>
+
+        <p>&copy; 2026 WaiView | Wintec COMP506 Group Project</p>
+    </footer>
+
+</body>
+</html>

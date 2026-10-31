@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    WaiView - Waikato River Walk page
+    COMP506 Interactive Digital Media - Roopu 01
+    Cruz, Seton, Ronald, Kaden, Wiremu
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaiView - Waikato River Walk</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Site name and main navigation -->
+    <header>
+        <a href="index.html" class="site-name"><span class="wai">Wai</span><span class="view">View</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="videos.html" class="active">Videos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="side left"></div>
+
+        <!-- Main page content -->
+        <main>
+            <a href="videos.html" class="back">&lt; Back to walks</a>
+
+            <h1>Waikato River Walk</h1>
+
+            <div class="walk-top">
+                <video controls preload="metadata" playsinline poster="images/posters/waikato-river.jpg" title="Waikato River Walk video" aria-describedby="video-description">
+                    <source src="videos/waikato-river.mp4" type="video/mp4">
+                    <track kind="captions" src="videos/waikato-river.vtt" srclang="en" label="English (scene descriptions)">
+                    Your browser does not support video.
+                </video>
+                <iframe src="https://maps.google.com/maps?q=-37.7870,175.2840&amp;z=14&amp;output=embed" title="Map of Waikato River Walk"></iframe>
+            </div>
+
+            <div class="walk-info">
+                <div class="walk-text">
+                    <h2>About this walk</h2>
+                    <p>The Waikato River is the longest river in New Zealand (425 km) and it runs right through the middle of Hamilton. There are walking paths on both sides of the river so you can walk as far as you like.</p>
+                    <p>In our video we walk along the river path, past the Central City Jetty and down onto the sandy banks where the ducks hang out. We filmed it in October so there is lots of blossom on the trees.</p>
+
+                    <p id="video-description"><b>Video description:</b> A 5 minute walk along the Waikato River in Hamilton. It starts in the clear shallows at the edge of the river, follows the path through gardens full of blossom, goes down onto a sandy bank where geese are standing, and finishes at the Central City Jetty.</p>
+
+                    <h2>Things to look out for</h2>
+                    <ul>
+                        <li>The clear water near the edge, you can see the stones on the bottom</li>
+                        <li>The Central City Jetty</li>
+                        <li>Ducks and geese on the sand banks</li>
+                        <li>Pink and red flowers on the trees along the path</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <p><b>Location:</b> Central Hamilton</p>
+                    <p><b>Time:</b> Walk as far as you want</p>
+                    <p><b>Tips:</b> The path is flat and sealed so it's good for prams and bikes too.</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>More Walks</h2>
+            <div class="walk-list">
+                <a href="walk-lake-te-koo-utu.html" class="walk-card">
+                    <img src="images/thumbs/lake-te-koo-utu.jpg" alt="Lake Te Koo Utu">
+                    <h3>Lake Te Koo Utu</h3>
+                    <p>A peaceful walk around a small lake in the middle of Cambridge.</p>
+                </a>
+                <a href="walk-borman-road-lake.html" class="walk-card">
+                    <img src="images/thumbs/borman-road-lake.jpg" alt="Borman Road Lake">
+                    <h3>Borman Road Lake</h3>
+                    <p>A walk through a native wetland in the middle of Rototuna, Hamilton.</p>
+                </a>
+                <a href="walk-hamilton-lake.html" class="walk-card">
+                    <img src="images/thumbs/hamilton-lake.jpg" alt="Hamilton Lake">
+                    <h3>Hamilton Lake</h3>
+                    <p>The loop track around Hamilton's biggest lake, Lake Rotoroa.</p>
+                </a>
+            </div>
+        </main>
+
+        <div class="side right"></div>
+    </div>
+
+    <!-- Footer with the colour theme picker -->
+    <footer>
+
+        <!-- colour theme picker (CSS only - see the colour themes section in style.css) -->
+        <fieldset class="theme-picker">
+            <legend>Colour theme:</legend>
+            <input type="radio" name="theme" id="theme-default" checked>
+            <label for="theme-default">Default</label>
+            <input type="radio" name="theme" id="theme-dark">
+            <label for="theme-dark">Dark</label>
+            <input type="radio" name="theme" id="theme-contrast">
+            <label for="theme-contrast">High contrast</label>
+        </fieldset>
+
+        <p>&copy; 2026 WaiView | Wintec COMP506 Group Project</p>
+    </footer>
+
+</body>
+</html>

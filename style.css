@@ -1,0 +1,542 @@
+/*
+    WaiView - main stylesheet (style.css)
+    COMP506 Interactive Digital Media - Roopu 01
+    Used by every page. Colours come from our project scope:
+    green #119170 (ground), blue #3fa0e0 (water), cream #fdf3e7 (clouds), sky #b8e0ec (sky)
+*/
+
+/* ---------- Page background ---------- */
+
+body {
+    margin: 0;
+    font-family: "Rubik", Arial, sans-serif;
+    background-color: #b8e0ec;
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #222222;
+}
+
+/* ---------- Header and navigation ---------- */
+header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    background-color: #0b6b52;
+    border-bottom: 3px solid black;
+}
+
+/* site name on the left of the header */
+.site-name {
+    margin: 0 30px;
+    padding: 6px 16px;
+    background-color: #fdf3e7;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+/* "Wai" in our green and "View" in a darker water blue */
+.site-name .wai {
+    color: #119170;
+}
+
+.site-name .view {
+    color: #1d6fa5;
+}
+
+nav {
+    flex: 1;
+    height: 100%;
+}
+
+nav ul {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    flex: 1;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fdf3e7;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    background-color: #119170;
+}
+
+/* shows which page you are on */
+nav a.active {
+    background-color: white;
+    color: #0b6b52;
+}
+
+/* ---------- Page layout ---------- */
+/* three columns: background photo | white content | background photo */
+.page {
+    display: flex;
+}
+
+.side {
+    width: 20%;
+}
+
+main {
+    flex: 1;
+    padding: 40px 50px;
+    background-color: white;
+    text-align: center;
+    min-height: 500px;
+}
+
+/* ---------- Text ---------- */
+h1, h2 {
+    color: #119170;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+hr {
+    border: none;
+    border-top: 4px solid #119170;
+    margin: 30px 0;
+}
+
+p, li {
+    line-height: 1.6;
+}
+
+/* logo at the top of Home and About (inside the h1) */
+.logo-heading {
+    margin: 0;
+}
+
+.main-logo {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ---------- Buttons ---------- */
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 40px;
+    background-color: #0b6b52;
+    color: white;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #1d6fa5;
+}
+
+.text-left {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ---------- Walk cards (Home, Videos and the walk pages) ---------- */
+.walk-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.walk-card {
+    width: 220px;
+    border: 2px solid black;
+    background-color: #fdf3e7;
+    color: #222222;
+    text-decoration: none;
+}
+
+.walk-card:hover {
+    background-color: #b8e0ec;
+}
+
+.walk-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid black;
+}
+
+.walk-card h2,
+.walk-card h3 {
+    color: #119170;
+    font-size: 19px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin: 10px;
+}
+
+/* moving preview on the Videos page - the still picture swaps for the moving one on hover */
+.preview img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 2px solid black;
+}
+
+.preview .moving {
+    display: none;
+}
+
+.walk-card:hover .preview .moving,
+.walk-card:focus .preview .moving {
+    display: block;
+}
+
+.walk-card:hover .preview .still,
+.walk-card:focus .preview .still {
+    display: none;
+}
+
+.walk-card p {
+    margin: 0 10px 15px;
+    font-size: 15px;
+}
+
+/* ---------- Walk pages ---------- */
+.back {
+    display: block;
+    text-align: left;
+    color: #0b6b52;
+    margin-bottom: 20px;
+}
+
+.walk-top {
+    display: flex;
+    gap: 20px;
+}
+
+.walk-top video {
+    width: 300px;
+    border: 2px solid black;
+    background-color: black;
+}
+
+.walk-top iframe {
+    flex: 1;
+    min-height: 400px;
+    border: 2px solid black;
+}
+
+.coming-soon {
+    width: 300px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b8e0ec;
+    border: 2px solid black;
+    font-size: 20px;
+    color: #0b6b52;
+}
+
+.walk-info {
+    display: flex;
+    gap: 30px;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.walk-text {
+    flex: 2;
+}
+
+.info-box {
+    flex: 1;
+    align-self: flex-start;
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: #fdf3e7;
+    border: 2px solid #0b6b52;
+}
+
+/* extra info under the video (history, walk guide etc) */
+.walk-more {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* ---------- About page ---------- */
+.colours {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.colour {
+    width: 80px;
+    height: 50px;
+    border: 2px solid black;
+}
+
+.green {
+    background-color: #119170;
+}
+
+.blue {
+    background-color: #3fa0e0;
+}
+
+.cream {
+    background-color: #fdf3e7;
+}
+
+.sky {
+    background-color: #b8e0ec;
+}
+
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member {
+    width: 33%;
+    margin-bottom: 20px;
+}
+
+.member img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 3px solid black;
+    background-color: #b8e0ec;
+}
+
+/* ---------- Contact form ---------- */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    font-weight: 500;
+    color: #0b6b52;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid black;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+form .button {
+    align-self: center;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    background-color: #0b6b52;
+    border-top: 3px solid black;
+    color: #fdf3e7;
+    text-align: center;
+    padding: 25px;
+}
+
+footer a {
+    color: #fdf3e7;
+    font-weight: 500;
+}
+
+/* colour theme picker */
+.theme-picker {
+    border: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.theme-picker legend {
+    margin: 0 auto 5px;
+}
+
+.theme-picker label {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+/* ---------- Colour themes ----------
+   The radio buttons in the footer pick the theme.
+   body:has(#theme-dark:checked) means "when the Dark button is ticked". */
+
+/* dark theme */
+body:has(#theme-dark:checked) main {
+    background-color: #1f2b29;
+    color: #eeeeee;
+}
+
+body:has(#theme-dark:checked) h1,
+body:has(#theme-dark:checked) h2,
+body:has(#theme-dark:checked) .walk-card h2,
+body:has(#theme-dark:checked) .walk-card h3,
+body:has(#theme-dark:checked) .back,
+body:has(#theme-dark:checked) form label,
+body:has(#theme-dark:checked) .coming-soon {
+    color: #8fe0c2;
+}
+
+body:has(#theme-dark:checked) .walk-card,
+body:has(#theme-dark:checked) .info-box {
+    background-color: #2d3d3a;
+    color: #eeeeee;
+    border-color: #8fe0c2;
+}
+
+body:has(#theme-dark:checked) .walk-card:hover {
+    background-color: #3a504c;
+}
+
+body:has(#theme-dark:checked) .coming-soon {
+    background-color: #2d3d3a;
+}
+
+/* high contrast theme */
+body:has(#theme-contrast:checked) main {
+    background-color: black;
+    color: white;
+}
+
+body:has(#theme-contrast:checked) header,
+body:has(#theme-contrast:checked) footer {
+    background-color: black;
+    border-color: yellow;
+}
+
+body:has(#theme-contrast:checked) nav a.active {
+    background-color: yellow;
+    color: black;
+}
+
+body:has(#theme-contrast:checked) .site-name {
+    background-color: black;
+    border-color: yellow;
+}
+
+body:has(#theme-contrast:checked) .site-name .wai,
+body:has(#theme-contrast:checked) .site-name .view {
+    color: yellow;
+}
+
+body:has(#theme-contrast:checked) h1,
+body:has(#theme-contrast:checked) h2,
+body:has(#theme-contrast:checked) a,
+body:has(#theme-contrast:checked) .walk-card h2,
+body:has(#theme-contrast:checked) .walk-card h3,
+body:has(#theme-contrast:checked) form label,
+body:has(#theme-contrast:checked) .coming-soon {
+    color: yellow;
+}
+
+body:has(#theme-contrast:checked) .walk-card,
+body:has(#theme-contrast:checked) .info-box,
+body:has(#theme-contrast:checked) .coming-soon {
+    background-color: black;
+    color: white;
+    border-color: yellow;
+}
+
+body:has(#theme-contrast:checked) .button {
+    background-color: yellow;
+    color: black;
+}
+
+body:has(#theme-contrast:checked) hr {
+    border-top-color: yellow;
+}
+
+/* ---------- Phones and small screens ---------- */
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    .site-name {
+        margin: 0 0 10px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav a {
+        padding: 15px 0;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .side {
+        display: none;
+    }
+
+    main {
+        padding: 30px 20px;
+    }
+
+    .walk-top, .walk-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .walk-top iframe {
+        width: 100%;
+        min-height: 250px;
+    }
+
+    .member {
+        width: 50%;
+    }
+}

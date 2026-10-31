@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+    WaiView - Videos page (Feature Video Products Page)
+    COMP506 Interactive Digital Media - Roopu 01
+    Cruz, Seton, Ronald, Kaden, Wiremu
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WaiView - Walks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Site name and main navigation -->
+    <header>
+        <a href="index.html" class="site-name"><span class="wai">Wai</span><span class="view">View</span></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="videos.html" class="active">Videos</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="page">
+        <div class="side left"></div>
+
+        <!-- Main page content -->
+        <main>
+            <h1>Walks</h1>
+            <p>Choose a walk to watch the video and find out more about it. Hover over a walk to see a quick preview.</p>
+
+            <hr>
+
+            <div class="walk-list">
+                <!-- hover over (or tab to) this card to see a moving preview of the walk -->
+                <a href="walk-waikato-river.html" class="walk-card">
+                    <div class="preview">
+                        <img src="images/thumbs/waikato-river.jpg" alt="Waikato River Walk" class="still">
+                        <img src="images/previews/waikato-river.webp" alt="" class="moving">
+                    </div>
+                    <h2>Waikato River Walk</h2>
+                    <p>A walk along the Waikato River through the middle of Hamilton.</p>
+                </a>
+                <!-- hover over (or tab to) this card to see a moving preview of the walk -->
+                <a href="walk-lake-te-koo-utu.html" class="walk-card">
+                    <div class="preview">
+                        <img src="images/thumbs/lake-te-koo-utu.jpg" alt="Lake Te Koo Utu" class="still">
+                        <img src="images/previews/lake-te-koo-utu.webp" alt="" class="moving">
+                    </div>
+                    <h2>Lake Te Koo Utu</h2>
+                    <p>A peaceful walk around a small lake in the middle of Cambridge.</p>
+                </a>
+                <!-- hover over (or tab to) this card to see a moving preview of the walk -->
+                <a href="walk-borman-road-lake.html" class="walk-card">
+                    <div class="preview">
+                        <img src="images/thumbs/borman-road-lake.jpg" alt="Borman Road Lake" class="still">
+                        <img src="images/previews/borman-road-lake.webp" alt="" class="moving">
+                    </div>
+                    <h2>Borman Road Lake</h2>
+                    <p>A walk through a native wetland in the middle of Rototuna, Hamilton.</p>
+                </a>
+                <!-- hover over (or tab to) this card to see a moving preview of the walk -->
+                <a href="walk-hamilton-lake.html" class="walk-card">
+                    <div class="preview">
+                        <img src="images/thumbs/hamilton-lake.jpg" alt="Hamilton Lake" class="still">
+                        <img src="images/previews/hamilton-lake.webp" alt="" class="moving">
+                    </div>
+                    <h2>Hamilton Lake</h2>
+                    <p>The loop track around Hamilton's biggest lake, Lake Rotoroa.</p>
+                </a>
+            </div>
+        </main>
+
+        <div class="side right"></div>
+    </div>
+
+    <!-- Footer with the colour theme picker -->
+    <footer>
+
+        <!-- colour theme picker (CSS only - see the colour themes section in style.css) -->
+        <fieldset class="theme-picker">
+            <legend>Colour theme:</legend>
+            <input type="radio" name="theme" id="theme-default" checked>
+            <label for="theme-default">Default</label>
+            <input type="radio" name="theme" id="theme-dark">
+            <label for="theme-dark">Dark</label>
+            <input type="radio" name="theme" id="theme-contrast">
+            <label for="theme-contrast">High contrast</label>
+        </fieldset>
+
+        <p>&copy; 2026 WaiView | Wintec COMP506 Group Project</p>
+    </footer>
+
+</body>
+</html>
